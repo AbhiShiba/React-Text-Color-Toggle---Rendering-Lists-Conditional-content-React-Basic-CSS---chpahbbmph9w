@@ -3,10 +3,25 @@ import '../styles/App.css';
 
 const App = () => {
 //code here 
+
+  const [changeStyle,setChangeStyle] = useState("redColor");
+  useEffect(() =>{
+    setChangeStyle("redColor");
+  },[])
+  // setChangeStyle("redColor")
+  const clickHandle = () => {
+    
+    if(changeStyle === "redColor"){
+      setChangeStyle("blueColor")
+    }
+    else{
+      setChangeStyle("redColor")
+    }
+  }
   return (
     <div id="main">
-      <p className={} >Newton School</p>
-      <button id='button' onClick={}>Change Style</button>
+      <p className={changeStyle} >Newton School</p>
+      <button id='button' onClick={clickHandle}>Change Style</button>
     </div>
   )
 }
