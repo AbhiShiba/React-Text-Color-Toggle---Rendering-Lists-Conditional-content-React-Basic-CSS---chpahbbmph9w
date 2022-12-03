@@ -11,8 +11,13 @@ const App = () => {
   // setChangeStyle("redColor")
   const clickHandle = () => {
   
-
+    if(changeStyle === "redColor"){
       setChangeStyle("blueColor")
+    }
+    else{
+      setChangeStyle("redColor")
+    }
+      
     
     
   }
